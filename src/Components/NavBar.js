@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 var NavBar = React.createClass({
     render : function(){
@@ -7,9 +8,9 @@ var NavBar = React.createClass({
 
             <div data-role="navbar">
                <ul>
-                  <li><a href="#anylink">Home</a></li>
-                  <li><a href="#anylink">Page Two</a></li>
-                  <li><a href="#anylink">Search</a></li>
+                  <li><Link to="home">Home</Link></li>
+                  <li><Link to="pagetwo">Page Two</Link></li>
+                  <li><Link to="search">Search</Link></li>
               </ul>
            </div>
         );
