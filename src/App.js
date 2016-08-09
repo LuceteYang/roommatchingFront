@@ -1,33 +1,40 @@
 import React, { Component } from 'react';
 
 import Header from './Components/Header';
-import NavBar from './Components/NavBar';
+import MainButton from './Components/MainButton';
 
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
 
-  render() {
-    return (
-      // <div className="App">
-      //   <div className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h2>Welcome to React</h2>
-      //   </div>
-      //   <p className="App-intro"> 
-      //     To get started, edit <code>src/App.js</code> and save to reload.
-      //   </p>
-      // </div>
-      <div>
-          <div className="container">
-            <Header/>
-           
-           </div> 
-      </div>
-    );
-  }
-}
+var mainImageStyle = {
+       backgroundImage: 'url(' + './src/public/mainImage.jpg' + ')',
+       textAlign : 'center',
+       width : '100%',
+       height : '500px',
+       backgroundSize:'cover',
+       backgroundPosition: 'center center',
+       paddingTop : '100px',
+       paddingBottom : '100px'
+    }
+
+var App = React.createClass({
+    
+    render : function(){
+      return (
+          <div>
+              <div className="container">
+              <Header/>
+              </div > 
+              <div style = {mainImageStyle}>
+                  
+                      <MainButton/>
+                  
+              </div>
+           </div>
+      );
+    }
+});
 
 
 
