@@ -20,9 +20,10 @@ class App extends Component {
       //   </p>
       // </div>
       <div>
-      <Header/>
-      <NavBar/>
-        {this.props.children}
+          <div className="container">
+            <Header/>
+           
+           </div> 
       </div>
     );
   }
