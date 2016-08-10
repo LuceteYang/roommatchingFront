@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './Components/Header';
 import MainButton from './Components/MainButton';
+import MainSection from './Components/MainSection';
 
 import logo from './logo.svg';
 import './App.css';
@@ -18,6 +19,10 @@ var mainImageStyle = {
        paddingBottom : '100px'
     }
 
+var containerCenter = {
+    textAlign : 'center'
+}
+
 var App = React.createClass({
     
     render : function(){
@@ -27,10 +32,14 @@ var App = React.createClass({
               <Header/>
               </div > 
               <div style = {mainImageStyle}>
-                  
                       <MainButton/>
-                  
               </div>
+              <div className="container" style = {containerCenter}>
+                  <MainSection/>
+                  <MainSection/>
+                  <MainSection/>
+                  <MainSection/>
+              </div > 
            </div>
       );
     }
