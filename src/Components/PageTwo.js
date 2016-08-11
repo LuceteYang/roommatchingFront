@@ -4,14 +4,20 @@
 import React from 'react';
 import axios from 'axios';
 var jsonp = require('jsonp');
-import {RadioGroup, Radio} from 'react-radio-group';
+import Choiceform from './Choiceform'
+import SelectItemInfo from './SelectItemInfo'
 class PageTwo extends React.Component {
-    getInitialState() {
-        return {selectedValue: 'apple'};
-    }
-
-    handleChange(value) {
-        this.setState({selectedValue: value});
+    constructor(props) {
+        super(props);
+            this.state = {
+                selectedKey: -1,
+                contactData:[
+                    {title: "올빼미형 9시 이후", img: '../src/public/owl.PNG'},
+                    {title: "아침형 8시 이전", img: '../src/public/clock.PNG'},
+                    {title: "보통형 8시 이후 9시 이전", img: '../src/public/chicken.PNG'},
+                    {title: "상관없어요", img: '../src/public/owl.PNG'}
+                ]
+            };
     }
     onClick() {
         /*        axios.get('https://roommatching-rooney11.c9users.io/auth/facebook')
@@ -40,16 +46,53 @@ class PageTwo extends React.Component {
                 alert(response.data); } ) // SUCCESS
             .catch( response => { console.log(response); } ); // ERROR
     }
+
+
+    _onSelect(key){
+        if(key==this.state.selectedKey){
+            console.log("key select cancelled");
+            this.setState({
+                selectedKey: -1,
+                selected: {
+                    name: "",
+                    phone: ""
+                }
+            });
+            return;
+        }
+
+        this.setState({
+            selectedKey: key,
+            selected: this.state.contactData[key]
+        });
+        console.log(key + " is selected");
+    }
+
+    _isSelected(key){
+        if(this.state.selectedKey == key){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    ulstyle = {
+        "list-style": "none"
+    }
     render() {
         return (
             <div>
+                <Choiceform title="언제 일어나나요?" />
                 <h2>언제 일어나나요?</h2>
-                <form name="fruit">
-                    <input type="radio" name="fruit" value="apple" />올빼미형 9시 이후
-                    <input type="radio" name="fruit" value="orange" />아침형 8시 이전
-                    <input type="radio" name="fruit" value="watermelon" />보통형 8시 이후 9시 이전
-                    <input type="radio" name="fruit" value="watermelon" />상관없어요
-                </form>
+                <ul style={this.ulstyle}>
+                    {this.state.contactData.map((contact, i) => {
+                        return (<SelectItemInfo title={contact.title}
+                                             img={contact.img}
+                                             key={i}
+                                             contactKey={i}
+                                             isSelected={this._isSelected.bind(this)(i)}
+                                             onSelect={this._onSelect.bind(this)}/>);
+                    })}
+                </ul>
                 <button type="button" onClick={this.onClick}>Click Me</button>
                 <button type="button" onClick={this.logoutClick}>Log out</button>
                 <h2>Hey, I am PageTwo!</h2>
