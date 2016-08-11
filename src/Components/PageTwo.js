@@ -29,7 +29,7 @@ class PageTwo extends React.Component {
         return (
             <div>
                 <h2>언제 일어나나요?</h2>
-                <form name="fruit" selectedValue={this.state.selectedValue} onChange={this.handleChange}>
+                <form name="fruit">
                     <input type="radio" name="fruit" value="apple" />올빼미형 9시 이후
                     <input type="radio" name="fruit" value="orange" />아침형 8시 이전
                     <input type="radio" name="fruit" value="watermelon" />보통형 8시 이후 9시 이전
