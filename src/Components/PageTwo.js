@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import axios from 'axios';
+var jsonp = require('jsonp');
 import {RadioGroup, Radio} from 'react-radio-group';
 class PageTwo extends React.Component {
     getInitialState() {
@@ -13,11 +14,25 @@ class PageTwo extends React.Component {
         this.setState({selectedValue: value});
     }
     onClick() {
-        axios.get('https://roommatching-rooney11.c9users.io/auth/facebook')
-            .then( response => {
-                var myWindow = window.open("", "MsgWindow", "width=500,height=500");
-                myWindow.document.write(response.data); } ) // SUCCESS
-            .catch( response => { console.log(response); } ); // ERROR
+        /*        axios.get('https://roommatching-rooney11.c9users.io/auth/facebook')
+         .then( response => {
+         var myWindow = window.open("", "MsgWindow", "width=500,height=500");
+         myWindow.document.write(response.data); } ) // SUCCESS
+         .catch( response => { console.log(response); } ); // ERROR*/
+        $(function(){
+            $.ajax({
+                url: 'https://roommatching-rooney11.c9users.io/auth/facebook',
+                type: "GET",
+                crossDomain: true,
+                contentType: "application/json; charset=utf-8",
+                dataType: "JSONP",
+                success : function(data) {
+                    console.log(data)
+                    var myWindow = window.open("", "MsgWindow", "width=500,height=500");
+                    myWindow.document.write(data.data);
+                },
+            });
+        });
     }
     logoutClick(){
         axios.get('https://roommatching-rooney11.c9users.io/sign_out')
