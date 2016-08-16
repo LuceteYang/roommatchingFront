@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import App2 from './App2';
 import Main from './Main';
 import Home from './Components/Home';
 import PageTwo from './Components/PageTwo';
@@ -12,13 +13,13 @@ import './index.css';
 ReactDOM.render(
     <Router history = {browserHistory}>
         <Route path = "/" component = {App}>
-           
-        </Route>
+         <IndexRoute component = {App2} />
         <Route path = "/main" component = {Main}>
              <IndexRoute component = {Home} />
-            <Route path = "home" component = {Home} />
-            <Route path = "pagetwo" component = {PageTwo} />
-            <Route path = "search" component = {Search} />
+            <Route path = "/home" component = {Home} />
+            <Route path = "/pagetwo" component = {PageTwo} />
+            <Route path = "/search" component = {Search} />
+        </Route>
         </Route>
     </Router>,
   document.getElementById('root')

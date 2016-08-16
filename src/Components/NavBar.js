@@ -8,9 +8,9 @@ var NavBar = React.createClass({
 
             <div data-role="navbar">
                <ul>
-                  <li><Link to="home">Home</Link></li>
-                  <li><Link to="pagetwo">Page Two</Link></li>
-                  <li><Link to="search">Search</Link></li>
+                  <li><Link to="/home">Home</Link></li>
+                  <li><Link to="/pagetwo">Page Two</Link></li>
+                  <li><Link to="/search">Search</Link></li>
               </ul>
            </div>
         );
