@@ -23,9 +23,7 @@ var Search = React.createClass({
         });
         }.bind(this));
  	},
-    hi : function(){
-        alert('dddd');
-    },
+  
 
   componentWillUnmount: function() {
     this.serverRequest.abort();
