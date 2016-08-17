@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import Menu from './Menu';
+
 
 var Header = React.createClass({
     render : function(){
@@ -8,14 +11,11 @@ var Header = React.createClass({
                   <a href="#" className="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
               </div>
               <div className="col-xs-4">
-                  
               </div>
               
               <div className="col-xs-4">
-                  <div data-role="collapsible" data-collapsed="true">
-                      <h1>Click me - I'm collapsible!</h1>
-                      <p>I'm now expanded by default.</p>
-                  </div>
+                    <Menu/>
+
               </div>
               
           </div>
