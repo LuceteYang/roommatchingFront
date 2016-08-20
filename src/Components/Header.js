@@ -2,23 +2,32 @@ import React from 'react';
 
 import Menu from './Menu';
 
-
+var FloatingStyle = {
+    top :"0.5px",
+    right : "24px",
+    position: "absolute"
+}
+// style="bottom: 45px; right: 24px;"
 var Header = React.createClass({
     render : function(){
         return (
-        <div data-role="header" className="row">
-              <div className="col-xs-4">
-                  <a href="#" className="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
-              </div>
-              <div className="col-xs-4">
-              </div>
-              
-              <div className="col-xs-4">
-                    <Menu/>
-
-              </div>
-              
-          </div>
+          <nav>
+            <div className="nav-wrapper">
+            <a href="#" className="brand-logo">Logo</a>
+                 <div className="fixed-action-btn horizontal" style={FloatingStyle} >
+                    <a className="btn-floating btn-large red">
+                    <i className="large material-icons">mode_edit</i>
+                    </a>
+                    <ul>
+                    <li><a className="btn-floating red"><i className="material-icons">insert_chart</i></a></li>
+                    <li><a className="btn-floating yellow darken-1"><i className="material-icons">format_quote</i></a></li>
+                    <li><a className="btn-floating green"><i className="material-icons">publish</i></a></li>
+                    <li><a className="btn-floating blue"><i className="material-icons">attach_file</i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
         );
     }
 });

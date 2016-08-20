@@ -15,10 +15,8 @@ ReactDOM.render(
         <Route path = "/" component = {App}>
          <IndexRoute component = {App2} />
         <Route path = "/main" component = {Main}>
-             <IndexRoute component = {Home} />
-            <Route path = "/home" component = {Home} />
-            <Route path = "/pagetwo" component = {PageTwo} />
-            <Route path = "/search" component = {Search} />
+           
+           
         </Route>
         </Route>
     </Router>,
@@ -29,3 +27,7 @@ ReactDOM.render(
 ReactDOM.render(<App />,
     document.getElementById('root')
 );*/
+//   <IndexRoute component = {Home} />
+//  <Route path = "/home" component = {Home} />
+// <Route path = "/pagetwo" component = {PageTwo} />
+// <Route path = "/search" component = {Search} />

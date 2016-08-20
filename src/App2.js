@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import MainButton from './Components/MainButton';
 import MainSection from './Components/MainSection';
 
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -28,10 +29,8 @@ var App = React.createClass({
     render : function(){
       return (
         <div>
-          <div>
-              <div className="container">
-              <Header/>
-              </div >
+          
+               <Header/>
               <div style = {mainImageStyle}>
                       <MainButton/>
               </div>
@@ -41,12 +40,14 @@ var App = React.createClass({
                   <MainSection/>
                   <MainSection/>
               </div >
-           </div>
+           
        </div>
       );
     }
 });
 
-
+// <div className="container">
+//               <Header/>
+//               </div >
 
 export default App;

@@ -15,7 +15,7 @@ var Search = React.createClass({
         },
     
     componentDidMount: function() {
-        this.serverRequest = $.get(this.state.source, function (result) {
+        this.serverRequest = $.get(this.props.url, function (result) {
         var lastGist = result[0];
         this.setState({
             username: lastGist.owner.login,
@@ -30,7 +30,7 @@ var Search = React.createClass({
   },
 
     render : function(){
-        console.log('test', this.state.searchResults);
+        console.log('test', this.state);
         return (
               <div>
                     <h2>Hey, I am Search!</h2>
