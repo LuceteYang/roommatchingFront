@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Menu from './Menu';
 
 var FloatingStyle = {
     top :"0.5px",
