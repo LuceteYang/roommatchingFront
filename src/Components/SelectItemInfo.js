@@ -14,17 +14,19 @@ class SelectItemInfo extends React.Component {
         let getStyle = isSelect => {
             if(!isSelect){
                 let style = {
-                width:"200px",
-                height:"200px",
-                fontWeight: 'bold',
-                "vertical-align": "middle",
-                backgroundImage:'url('+this.props.img+')'
-            };
+                    width:"200px",
+                    height:"200px",
+                    float:"left",
+                    fontWeight: 'bold',
+                    verticalAlign: "middle",
+                    backgroundImage:'url('+this.props.img+')'
+                };
                 return style;
             }else{
                 let style = {
                     width:"200px",
                     height:"200px",
+                    float:"left",
                     fontWeight: 'bold',
                     "vertical-align": "middle",
                     backgroundcolor:'#fff'
@@ -34,10 +36,9 @@ class SelectItemInfo extends React.Component {
         };
 
         return(
-            <li style={getStyle(this.props.isSelected)}
-                onClick={this.handleClick.bind(this)}>
-                {this.props.title}
-            </li>
+            <div style={getStyle(this.props.isSelected)}
+                 onClick={this.handleClick.bind(this)}>
+            </div>
         );
     }
 }

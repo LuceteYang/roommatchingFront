@@ -3,21 +3,20 @@
  */
 import React from 'react';
 import axios from 'axios';
-var jsonp = require('jsonp');
 import Choiceform from './Choiceform'
 import SelectItemInfo from './SelectItemInfo'
 class PageTwo extends React.Component {
     constructor(props) {
         super(props);
-            this.state = {
-                selectedKey: -1,
-                contactData:[
-                    {title: "올빼미형 9시 이후", img: '../src/public/owl.PNG'},
-                    {title: "아침형 8시 이전", img: '../src/public/clock.PNG'},
-                    {title: "보통형 8시 이후 9시 이전", img: '../src/public/chicken.PNG'},
-                    {title: "상관없어요", img: '../src/public/owl.PNG'}
-                ]
-            };
+        this.state = {
+            selectedKey: -1,
+            contactData:[
+                {title: "올빼미형 9시 이후", img: '../src/public/owl.PNG'},
+                {title: "아침형 8시 이전", img: '../src/public/clock.PNG'},
+                {title: "보통형 8시 이후 9시 이전", img: '../src/public/chicken.PNG'},
+                {title: "상관없어요", img: '../src/public/owl.PNG'}
+            ]
+        };
     }
     onClick() {
         /*        axios.get('https://roommatching-rooney11.c9users.io/auth/facebook')
@@ -76,26 +75,27 @@ class PageTwo extends React.Component {
         }
     }
     ulstyle = {
-        "list-style": "none"
+        width:"400px"
     }
     render() {
         return (
             <div>
                 <Choiceform title="언제 일어나나요?" />
-                <h2>언제 일어나나요?</h2>
-                <ul style={this.ulstyle}>
-                    {this.state.contactData.map((contact, i) => {
-                        return (<SelectItemInfo title={contact.title}
-                                             img={contact.img}
-                                             key={i}
-                                             contactKey={i}
-                                             isSelected={this._isSelected.bind(this)(i)}
-                                             onSelect={this._onSelect.bind(this)}/>);
-                    })}
-                </ul>
+                <h2>언제 일어나나요? {this.state.selectedKey>-1 ? this.state.contactData[this.state.selectedKey].title : ""}</h2>
+                <div>
+                    <div style={this.ulstyle}>
+                        {this.state.contactData.map((contact, i) => {
+                            return (<SelectItemInfo title={contact.title}
+                                                    img={contact.img}
+                                                    key={i}
+                                                    contactKey={i}
+                                                    isSelected={this._isSelected.bind(this)(i)}
+                                                    onSelect={this._onSelect.bind(this)}/>);
+                        })}
+                    </div>
+                </div>
                 <button type="button" onClick={this.onClick}>Click Me</button>
                 <button type="button" onClick={this.logoutClick}>Log out</button>
-                <h2>Hey, I am PageTwo!</h2>
             </div>
         );
     }
