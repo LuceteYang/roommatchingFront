@@ -6,11 +6,6 @@ import PageTwo from './PageTwo';
 import Search from './Search';
 
 class Tab extends React.Component{
-     getInitialState(){
-        return {
-            stage : 1 
-        }
-    }
 
     render(){
         return(
