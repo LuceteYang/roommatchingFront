@@ -6,9 +6,9 @@ import MainSection from './Components/MainSection';
 import FacebookButton from './Components/FacebookButton';
 
 // //
-import Counter from './Components/Counter';
-import Buttons from './Components/Buttons';
-import Option from './Components/Option';
+// import Counter from './Components/Counter';
+// import Buttons from './Components/Buttons';
+// import Option from './Components/Option';
 //////
 
 import logo from './logo.svg';
