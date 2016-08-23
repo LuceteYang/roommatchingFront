@@ -41,7 +41,7 @@ var App = React.createClass({
                       <MainButton/>
               </div>
               <div className="container" style = {containerCenter}>
-                    <FacebookButton fb={FB}/>
+                    <FacebookButton/>
                   <MainSection/>
                   <MainSection/>
                   <MainSection/>
