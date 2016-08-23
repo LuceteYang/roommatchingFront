@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Header from './Components/Header';
 import MainButton from './Components/MainButton';
@@ -6,9 +6,9 @@ import MainSection from './Components/MainSection';
 import FacebookButton from './Components/FacebookButton';
 
 // //
-// import Counter from './Components/Counter';
-// import Buttons from './Components/Buttons';
-// import Option from './Components/Option';
+import Counter from './Components/Counter';
+import Buttons from './Components/Buttons';
+import Option from './Components/Option';
 //////
 
 import logo from './logo.svg';
@@ -46,7 +46,10 @@ var App = React.createClass({
                   <MainSection/>
                   <MainSection/>
                   <MainSection/>
-                
+                  
+                    <Counter/>
+                   <Option/>
+                   <Buttons/>
               </div >
            
        </div>

@@ -2,6 +2,12 @@
  * Created by User on 2016-08-07.
  */
 import React from 'react';
+
+import Counter from './Counter';
+import Buttons from './Buttons';
+import Option from './Option';
+
+
 class Home extends React.Component {
     render() {
         var sectionStyle = {
@@ -26,6 +32,22 @@ class Home extends React.Component {
                     <label><input type="checkbox"  name="fourthdong" value="9" />9 동</label>
                 </div>
                 <button>저장</button>
+
+                <Test/>
+            </div>
+        );
+    }
+}
+
+class Test extends React.Component {
+    render(){
+        
+        return(
+            <div>
+                
+                 <Counter/>
+                <Option/>
+                <Buttons/>
             </div>
         );
     }
