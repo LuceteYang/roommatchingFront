@@ -24,7 +24,8 @@ class FacebookButton extends React.Component {
       var self = this;
 
       if( response.status === "connected" ) {
-         this.FB.api('/me', function(response) {
+         this.FB.api('/me','GET',{"fields":"id,name,email,gender,picture"}, function(response) {
+	      console.log('##',response)
             var message = "Welcome " + response.name;
             self.setState({
                message: message
