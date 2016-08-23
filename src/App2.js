@@ -46,9 +46,7 @@ var App = React.createClass({
                   <MainSection/>
                   <MainSection/>
                   <MainSection/>
-                  <Counter/>
-                  <Option/>
-                  <Buttons/>
+                
               </div >
            
        </div>
