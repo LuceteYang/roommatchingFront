@@ -9,6 +9,7 @@ class FacebookButton extends React.Component {
       this.state = {
          message: ""
       };
+      this.sendFacebookInfo = this.sendFacebookInfo.bind(this);
     }
 
 
@@ -26,12 +27,31 @@ class FacebookButton extends React.Component {
       if( response.status === "connected" ) {
          this.FB.api('/me','GET',{"fields":"id,name,email,gender,picture"}, function(response) {
 	      console.log('##',response)
+            this.sendFacebookInfo(response); //데이터 보내기
             var message = "Welcome " + response.name;
             self.setState({
                message: message
             });
          })
       }
+   }
+
+   sendFacebookInfo(response){
+      $.ajax({
+        // "https://roommatching-cloned-rooney11.c9users.io/testlogin?email="+email+"&"name="+name
+              url: 'https://roommatching-cloned-rooney11.c9users.io/testlogin?email=jae6120@naver.com&name=상환&provider=facebook ',
+              type: 'get',
+              dataType: 'json',
+              crossDomain : true,
+              cache: false,
+              success: function(data) {
+                  console.log('facebook success ajax', data);
+                  this.setState({facebook: data});
+              }.bind(this),
+              error: function(xhr, status, err) {
+                  console.error(this.state.source, status, err.toString());
+              }.bind(this)
+          });
    }
 
    onLogout(response) {
