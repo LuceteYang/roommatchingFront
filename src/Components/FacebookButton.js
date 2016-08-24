@@ -30,7 +30,24 @@ class FacebookButton extends React.Component {
       if( response.status === "connected" ) {
          this.FB.api('/me','GET',{"fields":"id,name,email,gender,picture"}, function(response) {
 	      console.log('##',response);
-            this.sendFacebookInfo(response); //데이터 보내기
+           // this.sendFacebookInfo(response); //데이터 보내기
+           $.ajax({
+        // "https://roommatching-cloned-rooney11.c9users.io/testlogin?email="+email+"&"name="+name
+              // url: 'https://roommatching-cloned-rooney11.c9users.io/testlogin?email=jae6120@naver.com&name=상환&provider=facebook ',
+              url : 'https://roommatching-cloned-rooney11.c9users.io/testlogin?email=' + response.email +'&name=' +response.name +'&provider=facebook', 
+              type: 'get',
+              dataType: 'json',
+              crossDomain : true,
+              cache: false,
+              success: function(data) {
+                  console.log('facebook success ajax', data);
+                  this.setState({facebook: data});
+              }.bind(this),
+              error: function(xhr, status, err) {
+                  console.error(this.state.source, status, err.toString());
+              }.bind(this)
+          });
+
             var message = "Welcome " + response.name;
             self.setState({
                message: message
