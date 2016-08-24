@@ -14,10 +14,13 @@ class FacebookButton extends React.Component {
 
 
   componentDidMount() {
+   
       this.FB.Event.subscribe('auth.logout', 
          this.onLogout.bind(this));
       this.FB.Event.subscribe('auth.statusChange', 
          this.onStatusChange.bind(this));
+      //     var response ={"email" : "sssssss", "name" : "dddldldldldldld"}
+      // this.sendFacebookInfo(response);
    }
       
    onStatusChange(response) {
@@ -26,7 +29,7 @@ class FacebookButton extends React.Component {
 
       if( response.status === "connected" ) {
          this.FB.api('/me','GET',{"fields":"id,name,email,gender,picture"}, function(response) {
-	      console.log('##',response)
+	      console.log('##',response);
             this.sendFacebookInfo(response); //데이터 보내기
             var message = "Welcome " + response.name;
             self.setState({
