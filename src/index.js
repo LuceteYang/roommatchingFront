@@ -11,7 +11,7 @@ import App2 from './App2';
 import Main from './Main';
 import Home from './Components/Home';
 import PageTwo from './Components/PageTwo';
-import Search from './Components/Search';
+import Search from './Components/ResultTab';
 import { Router, Route, browserHistory, IndexRoute} from 'react-router';
 
 import './index.css';

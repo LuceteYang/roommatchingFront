@@ -74,9 +74,9 @@ class PageTwo extends React.Component {
             return false;
         }
     }
-    ulstyle = {
-        width:"400px"
-    }
+    // ulstyle = {
+    //     width:"400px"
+    // }
     render() {
         return (
             <div>
