@@ -39,7 +39,8 @@ class FacebookButton extends React.Component {
    sendFacebookInfo(response){
       $.ajax({
         // "https://roommatching-cloned-rooney11.c9users.io/testlogin?email="+email+"&"name="+name
-              url: 'https://roommatching-cloned-rooney11.c9users.io/testlogin?email=jae6120@naver.com&name=상환&provider=facebook ',
+              // url: 'https://roommatching-cloned-rooney11.c9users.io/testlogin?email=jae6120@naver.com&name=상환&provider=facebook ',
+              url : 'https://roommatching-cloned-rooney11.c9users.io/testlogin?email=' + response.email +'&name=' +response.name +'&provider=facebook', 
               type: 'get',
               dataType: 'json',
               crossDomain : true,
