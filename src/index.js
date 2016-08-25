@@ -9,6 +9,8 @@ const store = createStore(counterApp);
 import App from './App';
 import App2 from './App2';
 import Main from './Main';
+import Chat from './Chat';
+
 import Home from './Components/Home';
 import PageTwo from './Components/PageTwo';
 import Search from './Components/ResultTab';
@@ -23,9 +25,10 @@ ReactDOM.render(
             <Route path = "/" component = {App}>
             <IndexRoute component = {App2} />
             <Route path = "/main" component = {Main}>
-            
-            
             </Route>
+             <Route path = "/chat" component = {Chat}>
+            </Route>
+
             </Route>
         </Router>
     </Provider>,
