@@ -2,33 +2,51 @@ import React from 'react';
 
 
 var FloatingStyle = {
-    top :"0.5px",
+    backgroundColor:"#ee6e73",
+    top :"13px",
     right : "24px",
     position: "absolute"
 }
+var liststyle = {
+    color : "#ee6e73"
+}
+
 // style="bottom: 45px; right: 24px;"
-var Header = React.createClass({
-    render : function(){
+class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+        this.dropdownfunc = this.dropdownfunc.bind(this)
+    }
+    dropdownfunc(){
+        $('.dropdown-button').dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrain_width: false, // Does not change width of dropdown to that of the activator
+          hover: true, // Activate on hover
+          gutter: 0, // Spacing from edge
+          belowOrigin: true, // Displays dropdown below the button
+          alignment: 'left' // Displays dropdown with edge aligned to the left of button
+        }
+      );
+    }
+    render(){
         return (
           <nav>
             <div className="nav-wrapper">
             <a href="#" className="brand-logo">Logo</a>
-                 <div className="fixed-action-btn horizontal" style={FloatingStyle} >
-                    <a className="btn-floating btn-large red">
-                    <i className="large material-icons">mode_edit</i>
-                    </a>
-                    <ul>
-                    <li><a className="btn-floating red"><i className="material-icons">insert_chart</i></a></li>
-                    <li><a className="btn-floating yellow darken-1"><i className="material-icons">format_quote</i></a></li>
-                    <li><a className="btn-floating green"><i className="material-icons">publish</i></a></li>
-                    <li><a className="btn-floating blue"><i className="material-icons">attach_file</i></a></li>
-                    </ul>
-                </div>
+            <ul id="dropdown2" className="dropdown-content">
+                <li><a style={liststyle} href="#!">one<span className="badge">1</span></a></li>
+                <li><a style={liststyle} href="#!">two<span className="new badge">1</span></a></li>
+                <li><a style={liststyle} href="#!">three</a></li>
+            </ul>
+            <a style={FloatingStyle} className="btn dropdown-button" href="#!" data-activates="dropdown2">Dropdown<i className="mdi-navigation-arrow-drop-down right"></i></a>
             </div>
         </nav>
-        
+
         );
     }
-});
+};
 
 export default Header;
