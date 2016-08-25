@@ -19,8 +19,8 @@ class Home extends React.Component {
                 <h2>충남대학교"</h2>
                 <h2><span style={sectionStyle}>></span> 기간</h2>
                 <div class="checkbox">
-                    <label><input type="checkbox" onClick="return KeepCount()" id="four" name="fourthdong" value="1" />하계 1차</label>
-                    <label><input type="checkbox" onClick="return KeepCount()" id="four" name="fourthdong" value="2" />하계 2차</label>
+                    <label><input type="checkbox" id="four" name="fourthdong" value="1" />하계 1차</label>
+                    <label><input type="checkbox" id="four" name="fourthdong" value="2" />하계 2차</label>
                 </div>
                 <h2><span style={sectionStyle}>></span> 희망동 선택</h2>
                 <div class="checkbox">
@@ -41,10 +41,10 @@ class Home extends React.Component {
 
 class Test extends React.Component {
     render(){
-        
+
         return(
             <div>
-                
+
                  <Counter/>
                 <Option/>
                 <Buttons/>
