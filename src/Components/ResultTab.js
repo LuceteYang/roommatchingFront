@@ -2,7 +2,7 @@
  * Created by User on 2016-08-07.
  */
 import React from 'react';
-
+import ResultUser from './ResultUser';
 class ResultTab extends React.Component{
 
     constructor(props){
@@ -15,11 +15,11 @@ class ResultTab extends React.Component{
     render() {
         console.log('test', this.state);
         return (
-              <div>
-                    <h1> ddd</h1>
-                    
-
-            </div>
+              <div style = {{textAlign: 'center'}} >
+                    <ResultUser/>
+                     <ResultUser/>
+                      <ResultUser/>
+              </div>
         );
     }
 }
