@@ -20,6 +20,8 @@ class Tab extends React.Component{
                         <div id="test1" className="col s12"><Home/></div>
                         <div id="test2" className="col s12"><PageTwo/></div>
                         <div id="test4" className="col s12"><ResultTab url="https://api.github.com/users/octocat/gists"/></div>
+             
+                         
              </div>
         );
     }

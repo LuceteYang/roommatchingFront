@@ -37,8 +37,8 @@ class Header extends React.Component {
             <div className="nav-wrapper">
             <a href="#" className="brand-logo">Logo</a>
             <ul id="dropdown2" className="dropdown-content">
-                <li><a style={liststyle} href="#!">one<span className="badge">1</span></a></li>
-                <li><a style={liststyle} href="#!">two<span className="new badge">1</span></a></li>
+                <li><a style={liststyle} href="#!">one<span className="badge">프로필 설정</span></a></li>
+                <li><a style={liststyle} href="#!">two<span className="new badge">메시지함</span></a></li>
                 <li><a style={liststyle} href="#!">three</a></li>
             </ul>
             <a style={FloatingStyle} className="btn dropdown-button" href="#!" data-activates="dropdown2">Dropdown<i className="mdi-navigation-arrow-drop-down right"></i></a>
