@@ -28,7 +28,7 @@ ReactDOM.render(
             </Route>
              <Route path = "/chat" component = {Chat}>
             </Route>
-
+           
             </Route>
         </Router>
     </Provider>,

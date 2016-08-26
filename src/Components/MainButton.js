@@ -6,7 +6,7 @@ var mainButtonStyle = {
        textAlign : 'center',
        margin : 'auto',
        padding : '125px',
-       height : '100%',
+      
        backgroundColor : 'hsla(282, 74%, 5%, 0.15)'
     } 
 

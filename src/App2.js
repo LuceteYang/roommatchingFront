@@ -2,7 +2,12 @@ import React from 'react';
 
 import Header from './Components/Header';
 import MainButton from './Components/MainButton';
-import MainSection from './Components/MainSection';
+
+import HomeParallax from './Components/HomeParallax';
+import HomeSection from './Components/HomeSection';
+import HomeCommonParallax from './Components/HomeCommonParallax';
+import HomeFooter from './Components/HomeFooter';
+
 import FacebookButton from './Components/FacebookButton';
 
 // //
@@ -95,22 +100,20 @@ class App extends React.Component {
         <div>
             
                 <Header/>
-                 <div className="parallax-container">
-                   <div className="parallax"><img src={'./src/public/mainImage.jpg'} alt ="dddd"/></div>
-                 </div>
-               
                 
+
+                 <HomeParallax/>
+                <HomeSection/>
                 <div className="container" style = {{textAlign:'center'}}>
                       <FacebookButton fb={FB}/>
-                    <MainSection/>
-                    <MainSection/>
-                    <MainSection/>
-                    <MainSection/>
+                   
                     
                       <Counter/>
                     <Option/>
                     <Buttons/>
                 </div >
+                <HomeCommonParallax/>
+                <HomeFooter/>
             
         </div>
       )
@@ -118,8 +121,6 @@ class App extends React.Component {
 
 
 }
-// <div className="container">
-//               <Header/>
-//               </div >
+
 
 export default App;
