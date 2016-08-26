@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 
     <script>
   window.fbAsyncInit = function() {
@@ -49,6 +50,22 @@
   <body>
     <div id="root"></div>
 
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDqYJ1iIKZP-YCjbIGd4c-ve8GjnmtC8BI",
+    authDomain: "roommatching-9d6da.firebaseapp.com",
+    databaseURL: "https://roommatching-9d6da.firebaseio.com",
+    storageBucket: "roommatching-9d6da.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+    
   </body>
   <script type="text/javascript" src="http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=285053698522924"></script>
 

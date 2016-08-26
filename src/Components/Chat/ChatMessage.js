@@ -1,18 +1,13 @@
 import React from 'react';
 
-import Header from './Components/Header';
 
-import ChatMessage from './Components/Chat/ChatMessage';
-import ChatInput from './Components/Chat/ChatInput';
 
-import logo from './logo.svg';
-import './App.css';
 
 
 var myFirebaseRef = new Firebase("https://roommatching-9d6da.firebaseio.com/");
 
 
-class Chat extends React.Component {
+class ChatMessage extends React.Component {
 
   constructor(props){
     super(props);
@@ -33,13 +28,11 @@ class Chat extends React.Component {
       
       <div>
          
-            <Header/>
-            <ChatMessage/>
-            <ChatInput/>
+            채팅 메시지
 
       </div>
     );
   }
 }
 
-export default Chat;
+export default ChatMessage;
