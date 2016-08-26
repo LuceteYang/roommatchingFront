@@ -32,12 +32,18 @@ class ChatInput extends React.Component {
       
       <div>
              
-              <div className="row">
+              <div className="row" style={{position:"fixed", bottom:"10px", left:"30px", right:"0px"}} >
                   <form className="col s12">
                     <div className="row">
-                      <div className="input-field col s6">
+                      <div className="input-field col s8 m9">
                         <input id="input_text" type="text" length="10"/>
                         <label for="input_text">메시지 쓰기</label>
+                      </div>
+                      <div className="col s4 m3">
+                       <button className="btn waves-effect waves-light" type="submit" name="action" style ={{ marginTop: "20px"}}>
+                          보내기
+                        <i className="material-icons right">send</i>
+                      </button>
                       </div>
                     </div>
                    

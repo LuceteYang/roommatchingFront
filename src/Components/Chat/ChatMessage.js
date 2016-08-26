@@ -28,7 +28,16 @@ class ChatMessage extends React.Component {
       
       <div>
          
-            채팅 메시지
+            <div className="chip" style = {{marginLeft : "30px", marginTop :"30px"}}>
+              <img src="images/yuna.jpg" alt="Contact Person"/>
+              Jane Doe
+            </div>
+             <div className="chip"  style = {{marginLeft : "20px", marginTop :"10px", paddingLeft : "30px", paddingRight : "30px"}}>
+            	
+              메시지 내용입니다 아녕하시오아ㅏ 아아아
+            </div>
+        
+
 
       </div>
     );
