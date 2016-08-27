@@ -7,13 +7,10 @@ import counterApp from './reducers'; // reducers 폴더에서 actions 폴더를 
 const store = createStore(counterApp);
 
 import App from './App';
-import App2 from './App2';
 import Main from './Main';
 import Chat from './Chat';
+import Home from './Home';
 
-import Home from './Components/Home';
-import PageTwo from './Components/PageTwo';
-import Search from './Components/ResultTab';
 import { Router, Route, browserHistory, IndexRoute} from 'react-router';
 
 import './index.css';
@@ -23,7 +20,7 @@ ReactDOM.render(
 
         <Router history = {browserHistory}>
             <Route path = "/" component = {App}>
-            <IndexRoute component = {App2} />
+            <IndexRoute component = {Home} />
             <Route path = "/main" component = {Main}>
             </Route>
              <Route path = "/chat" component = {Chat}>

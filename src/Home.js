@@ -105,7 +105,7 @@ class App extends React.Component {
                  <HomeParallax/>
                 <HomeSection/>
                 <div className="container" style = {{textAlign:'center'}}>
-                      <FacebookButton fb={FB}/>
+                      <FacebookButton />
                    
                     
                       <Counter/>

@@ -9,26 +9,22 @@ class SelectItemInfo extends React.Component {
     }
 
     render() {
-        console.log("rendered: " + this.props.name);
 
         let getStyle = isSelect => {
             if(!isSelect){
                 let style = {
-                    width:"200px",
-                    height:"200px",
-                    float:"left",
-                    fontWeight: 'bold',
-                    verticalAlign: "middle",
+                    width:"160px",
+                    height:"160px",
+                    display:"inline-block",
+                    backgroundColor:"white",
                     backgroundImage:'url('+this.props.img+')'
                 };
                 return style;
             }else{
                 let style = {
-                    width:"200px",
-                    height:"200px",
-                    float:"left",
-                    fontWeight: 'bold',
-                    "vertical-align": "middle",
+                    width:"160px",
+                    height:"160px",
+                    display:"inline-block",
                     backgroundcolor:'#fff'
                 };
                 return style;

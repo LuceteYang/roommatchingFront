@@ -15,7 +15,12 @@
     render() {
         return (
           <div>
-            <Choiceform/>
+            <Choiceform type={0} />
+            <Choiceform type={1} />
+            <Choiceform type={2} />
+            <Choiceform type={3} />
+            <Choiceform type={4} />
+            <Choiceform type={5} />
         </div>
         );
     }
