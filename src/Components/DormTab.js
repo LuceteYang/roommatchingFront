@@ -8,7 +8,7 @@ import Buttons from './Buttons';
 import Option from './Option';
 
 
-class First extends React.Component {
+class DormTab extends React.Component {
     render() {
         var sectionStyle = {
             color:'#ff4444'
@@ -84,4 +84,4 @@ class Test extends React.Component {
     }
 }
 
-export default First;
+export default DormTab;

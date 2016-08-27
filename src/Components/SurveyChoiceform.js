@@ -1,7 +1,7 @@
 import React from 'react';
- import SelectItemInfo from './SelectItemInfo'
+ import SurveyItemInfo from './SurveyItemInfo'
 
- class Choiceform extends React.Component {
+ class SurveyChoiceform extends React.Component {
         constructor(props) {
         super(props);
         this.state = {
@@ -112,13 +112,13 @@ import React from 'react';
                       <div className= "col s12 m10 l10 card">
                       <h6>{this.state.surveyData[this.state.type].question} {this.state.MyChoice>-1 ? this.state.surveyData[this.state.type].answers[this.state.MyChoice].title : ""}</h6>
                       <div className="col s12 m12 l12" style={this.centerstyle}>
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[0].title}
                         img = {this.state.surveyData[this.state.type].answers[0].img}
                         contactKey = {0}
                         isSelected={this.isSelectedMyChoice.bind(this)(0)}
                         onSelect={this.MyChoiceSelect.bind(this)} />
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[1].title}
                         img = {this.state.surveyData[this.state.type].answers[1].img}
                         contactKey = {1}
@@ -126,13 +126,13 @@ import React from 'react';
                         onSelect={this.MyChoiceSelect.bind(this)} />
                        </div>
                       <div className="col s12 m12 l12" style={this.centerstyle} >
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[2].title}
                         img = {this.state.surveyData[this.state.type].answers[2].img}
                         contactKey = {2}
                         isSelected={this.isSelectedMyChoice.bind(this)(2)}
                         onSelect={this.MyChoiceSelect.bind(this)} />
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[3].title}
                         img = {this.state.surveyData[this.state.type].answers[3].img}
                         contactKey = {3}
@@ -147,13 +147,13 @@ import React from 'react';
                       <div className= "col s12 m10 l10 card">
                       <h6>룸메이트는 어떤 대답을 하길 원하나요? {this.state.selectedKey1>-1 ? this.state.surveyData[this.state.type].answers[this.state.selectedKey1].title : ""}</h6>
                       <div className="col s12 m12 l12" style={this.centerstyle}>
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[0].title}
                         img = {this.state.surveyData[this.state.type].answers[0].img}
                         contactKey = {0}
                         isSelected={this._isSelected1.bind(this)(0)}
                         onSelect={this._onSelect1.bind(this)} />
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[1].title}
                         img = {this.state.surveyData[this.state.type].answers[1].img}
                         contactKey = {1}
@@ -161,13 +161,13 @@ import React from 'react';
                         onSelect={this._onSelect1.bind(this)} />
                        </div>
                       <div className="col s12 m12 l12" style={this.centerstyle} >
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[2].title}
                         img = {this.state.surveyData[this.state.type].answers[2].img}
                         contactKey = {2}
                         isSelected={this._isSelected1.bind(this)(2)}
                         onSelect={this._onSelect1.bind(this)} />
-                      <SelectItemInfo
+                      <SurveyItemInfo
                         title={this.state.surveyData[this.state.type].answers[3].title}
                         img = {this.state.surveyData[this.state.type].answers[3].img}
                         contactKey = {3}
@@ -182,4 +182,4 @@ import React from 'react';
     }
 }
 
-export default Choiceform;
+export default SurveyChoiceform;
