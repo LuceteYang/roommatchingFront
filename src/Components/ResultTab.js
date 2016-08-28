@@ -9,19 +9,30 @@ class ResultTab extends React.Component{
         super(props);
          this.state = {
             selectedKey : -1,
+            
+            prefernce_survey : {preference_sociality : 3, preference_familiarity : 2, preference_awaken : 1, preference_smoke : 2, preference_game : 1},
+            
             userData:[{
-                percent : 77,
-                survey1 : { first : "보통형", second : "9시 이후 9시 이전"},
-                survey2 : {first : "흡연자", second : "흡연자입니다"},
-                survey3 : {first : "엄청친하게", second : "soulmate처럼"},
-                survey4 : {first : "완전 취침", second : "어떤 소리와 빛에도 굴하지 않는다"}
-                
+                percent: 77,
+                id : 4, 
+                name:"준태",
+                email : "kiss9815@naver.com", 
+                image :'https://scontent.xx.fbcdn.net/v/t1.0-9/544172_438657176227436_1237703087_n.jpg?oh=70e163ff0dc39453b211cf074fcd0867&oe=5853FC43', 
+                birth:1990, major:"컴퓨터공학과", 
+                univ_dong1_name: "4동", univ_dong2_name: "1동", 
+                preference_period1_name: "하계 1차", preference_period2_name: "하계 2차",
+                survey :{sociality : 2, familiarity :1, awaken :2, smoke :1, game : 2} 
+            
             },{
-                percent :30,
-                survey1 : { first : "보통형", second : "9시 이후 9시 이전"},
-                survey2 : {first : "금연자", second : "흡연자입니다"},
-                survey3 : {first : "안친해", second : "soulmate처럼"},
-                survey4 : {first : "안자", second : "어떤 소리와 빛에도 굴하지 않는다"}
+                percent: 33,
+                id : 4, 
+                name:"상환",
+                email : "sangwhan@naver.com", 
+                image :'https://scontent.xx.fbcdn.net/v/t1.0-9/544172_438657176227436_1237703087_n.jpg?oh=70e163ff0dc39453b211cf074fcd0867&oe=5853FC43', 
+                birth:1990, major:"철학과", 
+                univ_dong1_name: "4동", univ_dong2_name: "1동", 
+                preference_period1_name: "하계 1차", preference_period2_name: "하계 2차",
+                survey :{sociality : 1, familiarity :1, awaken :2, smoke :1, game : 2}
             }
             ]
         }
@@ -37,7 +48,7 @@ class ResultTab extends React.Component{
         console.log('test', this.state);
         return (
               <div style = {{textAlign: 'center'}} >
-                  
+                  <div>{mapToComponents(this.state.userData)}</div>
               </div>
         );
     }
