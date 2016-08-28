@@ -7,12 +7,13 @@
   },
   "dependencies": {
     "axios": "^0.13.1",
+    "classnames": "^2.2.5",
+    "fb": "git+https://git@github.com/node-facebook/facebook-node-sdk.git",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-facebook-login": "^3.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.1",
-    "fb": "git+https://git@github.com/node-facebook/facebook-node-sdk.git",
     "redux": "^3.5.2"
   },
   "scripts": {

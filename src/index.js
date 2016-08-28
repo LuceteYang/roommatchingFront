@@ -10,6 +10,7 @@ import App from './App';
 import Main from './Main';
 import Chat from './Chat';
 import Home from './Home';
+import Profile from './Profile'
 
 import { Router, Route, browserHistory, IndexRoute} from 'react-router';
 
@@ -25,7 +26,8 @@ ReactDOM.render(
             </Route>
              <Route path = "/chat" component = {Chat}>
             </Route>
-           
+             <Route path = "/profile" component = {Profile}>
+            </Route>
             </Route>
         </Router>
     </Provider>,

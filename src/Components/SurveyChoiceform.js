@@ -5,8 +5,8 @@ import React from 'react';
         constructor(props) {
         super(props);
         this.state = {
-            MyChoice: -1,
-            selectedKey1: -1,
+            MyChoice: this.props.myChoice,
+            selectedKey1: this.props.wishChoice,
             type:this.props.type,
             surveyData:[
             {question:"아침에 언제 일어나나요?",
@@ -183,3 +183,13 @@ import React from 'react';
 }
 
 export default SurveyChoiceform;
+
+SurveyChoiceform.propTypes = {
+    myChoice: React.PropTypes.number,
+    wishChoice: React.PropTypes.number
+};
+
+SurveyChoiceform.defaultProps = {
+    myChoice: -1,
+    wishChoice: -1
+};

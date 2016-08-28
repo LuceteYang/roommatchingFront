@@ -35,9 +35,9 @@ class Header extends React.Component {
         return (
           <nav>
             <div className="nav-wrapper">
-            <a href="#" className="brand-logo">Logo</a>
+            <a href="/" className="brand-logo">Logo</a>
             <ul id="dropdown2" className="dropdown-content">
-                <li><a style={liststyle} href="#!">one<span className="badge">프로필 설정</span></a></li>
+                <li><a style={liststyle} href="/profile">one<span className="badge">프로필 설정</span></a></li>
                 <li><a style={liststyle} href="/chat">two<span className="new badge">메시지함</span></a></li>
                 <li><a style={liststyle} href="#!">three</a></li>
             </ul>
