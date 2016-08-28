@@ -7,6 +7,7 @@ class ResultTab extends React.Component{
 
     constructor(props){
         super(props);
+        console.log('ResultTab constructor');
          this.state = {
             selectedKey : -1,
             
@@ -39,6 +40,8 @@ class ResultTab extends React.Component{
     }
 
     render() {
+        console.log('ResultTab render');
+
         const mapToComponents = (data) =>{
         return data.map((user, i) =>{
           

@@ -23,15 +23,16 @@ class ResultUser extends React.Component{
             ]}]
         }
     }
-
+   
     render() {
         console.log('test', this.state);
+      
      //  https://scontent.xx.fbcdn.net/v/t1.0-9/544172_438657176227436_1237703087_n.jpg?oh=70e163ff0dc39453b211cf074fcd0867&oe=5853FC43
   
         // const propSociality =;
     //    let sociality = this.state.surveyData[0].answers[this.props.user.survey.sociality];
         return (
-              <div className="container">
+              <div className="container" id = "staggered-test">
                     <div className="col s12 m6">
                         
                         <div className="card horizontal">
@@ -47,18 +48,19 @@ class ResultUser extends React.Component{
                                 {this.props.user.major}<br/>
                                 {this.props.user.univ_dong1_name}<br/>
                                 {this.props.user.univ_dong2_name}<br/>
-                                {this.state.surveyData[0].answers[this.props.user.survey.sociality].title }<br/>
-                              
-                                {this.props.user.survey.familiarity  }<br/>
-                                {this.props.user.survey.awaken   }<br/>
-                                {this.props.user.survey.smoke  }<br/>
-                                {this.props.user.survey.game  }
+                               
 
                             </p>
                             </div>
                             <div className="card-reveal">
                             <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <p> {this.state.surveyData[0].answers[this.props.user.survey.sociality].title }<br/>
+                              
+                                {this.props.user.survey.familiarity  }<br/>
+                                {this.props.user.survey.awaken   }<br/>
+                                {this.props.user.survey.smoke  }<br/>
+                                {this.props.user.survey.game  }
+                            </p>
                             </div>
                         </div>
                                

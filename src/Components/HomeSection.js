@@ -2,6 +2,7 @@ import React from 'react';
 // import axios from 'axios';
 
 
+
 class HomeSection extends React.Component {
 
      constructor(props){
@@ -15,37 +16,74 @@ class HomeSection extends React.Component {
 
   
     render(){
-
+         let background1 = {
+                    width:"200px",
+                    backgroundPosition: 'center center',
+                    height:"190px",
+                    display:"inline-block",
+                     backgroundSize:'cover',
+                   backgroundImage:'url(../src/public/home_facebook.png)'
+                };
+               
+         let background2 = {
+                    width:"200px",
+                    backgroundPosition: 'center center',
+                    height:"190px",
+                    display:"inline-block",
+                     backgroundSize:'cover',
+                   backgroundImage:'url(../src/public/home_survey.png)'
+                };
+        let background3 = {
+            width:"200px",
+            backgroundPosition: 'center center',
+            height:"190px",
+            display:"inline-block",
+                backgroundSize:'cover',
+            backgroundImage:'url(../src/public/home_choose.png)'
+        };
+        let background4 = {
+            width:"200px",
+            backgroundPosition: 'center center',
+            height:"190px",
+            display:"inline-block",
+                backgroundSize:'cover',
+            backgroundImage:'url(../src/public/home_contact.png)'
+        };
         return (
             
              <div className="container">
                     <div className="section">
 
                     <div className="row">
-                        <div className="col s12 m4">
-                        <div className="icon-block">
+                        <div className="col s6 l3" >
+                        <div className="icon-block center" >
                             <h2 className="center brown-text"><i className="material-icons">flash_on</i></h2>
-                            <h5 className="center">Speeds up development</h5>
-
-                            <p className="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                            <h5 className="center">페이스북 연동</h5>
+                            <div style = {background1}> </div>
                         </div>
                         </div>
 
-                        <div className="col s12 m4">
-                        <div className="icon-block">
+                        <div className="col s6 l3">
+                        <div className="icon-block center">
                             <h2 className="center brown-text"><i className="material-icons">group</i></h2>
-                            <h5 className="center" className="white-text">User Experience Focused</h5>
+                            <h5 className="center">설문조사 하기</h5>
 
-                            <p className="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+                            <div style = {background2}> </div>
                         </div>
                         </div>
 
-                        <div className="col s12 m4">
-                        <div className="icon-block">
+                        <div className="col s6 l3">
+                        <div className="icon-block center">
                             <h2 className="center brown-text"><i className="material-icons">settings</i></h2>
-                            <h5 className="center">Easy to work with</h5>
-
-                            <p className="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                            <h5 className="center">매칭 결과보기</h5>
+                            <div style = {background3}> </div>    
+                        </div>
+                        </div>
+                        <div className="col s6 l3">
+                        <div className="icon-block center">
+                            <h2 className="center brown-text"><i className="material-icons">settings</i></h2>
+                            <h5 className="center">룸메 연락하기</h5>
+                            <div style = {background4}> </div>
                         </div>
                         </div>
                     </div>

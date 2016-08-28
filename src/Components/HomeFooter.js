@@ -23,8 +23,8 @@ class HomeFooter extends React.Component {
                     <div className="container">
                     <div className="row">
                         <div className="col l6 s12">
-                        <h5 className="white-text">Company Bio</h5>
-                        <p className="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+                        <h5 className="white-text">룸메이칭(룸메이트 매칭)</h5>
+                        <p className="grey-text text-lighten-4">안녕하세요 룸메이트 때문에 고생하시는 여러분을 위해 만든 내게 꼭 맞는 룸메이트를 매칭해주는 룸메이칭입니다.</p>
 
 
                         </div>

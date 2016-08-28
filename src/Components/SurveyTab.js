@@ -8,6 +8,8 @@
  class SurveyTab extends React.Component {
     constructor(props) {
         super(props);
+        console.log('surveyTab constructor');
+
         this.state = {
             type0mychoice:3
         };
@@ -15,6 +17,7 @@
 
 
     render() {
+        console.log('surveyTab render');
         return (
           <div>
             <SurveyChoiceform type={0} myChoice={this.state.type0mychoice} wishChoice={0} />

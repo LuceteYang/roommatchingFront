@@ -13,8 +13,8 @@ class Tab extends React.Component{
                          <div className="col s12">
                          <ul className="tabs">
                              <li className="tab col s3"><a  href="#test1">기간 및 기숙사 선택</a></li>
-                            <li className="tab col s3"><a className="active" href="#test2 ">설문 조사 하기</a></li>
-                            <li className="tab col s3"><a  href="#test4">매칭 결과 보기</a></li>
+                            <li className="tab col s3"><a  href="#test2 ">설문 조사 하기</a></li>
+                            <li className="tab col s3"><a className="active" href="#test4">매칭 결과 보기</a></li>
                         </ul>
                         </div>
                         <div id="test1" className="col s12"><DormTab/></div>

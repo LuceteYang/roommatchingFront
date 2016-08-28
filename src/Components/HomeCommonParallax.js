@@ -27,7 +27,7 @@ class HomeCommonParallax extends React.Component {
                     </div>
                 </div>
                 </div>
-                <div className="parallax"><img src={'./src/public/mainImage.jpg'} alt="Unsplashed background img 3"/></div>
+                <div className="parallax"><img src={'./src/public/mainSecond.jpg' } style = {{height : "1100px"}}alt="Unsplashed background img 3"/></div>
             </div>
         
            
