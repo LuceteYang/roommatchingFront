@@ -6,12 +6,13 @@ class ResultUser extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-
+           
         }
     }
 
     render() {
         console.log('test', this.state);
+       
         return (
               <div className="container">
                     <div className="col s12 m6">
@@ -19,11 +20,11 @@ class ResultUser extends React.Component{
                               <div className="card horizontal">
                                     <div className="card-image waves-effect waves-block waves-light ">
                                     <img className="activator friend-thumbnail" src="http://lorempixel.com/100/190/nature/10"/>
-                                     <span className="card-title" style ={{marginBottom: "20px"}}>80%</span>
+                                     <span className="card-title" style ={{marginBottom: "20px"}}>{}%</span>
                                     </div>
                                     <div className="card-content" style ={{width: "100%"}}>
-                                    <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                                    <p><a href="#">This is a link</a></p>
+                                    <span className="card-title activator grey-text text-darken-4"><i className="material-icons right">more_vert</i></span>
+                                    <p>This is a link</p>
                                     </div>
                                     <div className="card-reveal">
                                     <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>

@@ -1,10 +1,11 @@
 import React from 'react';
+import Input from '../../public/src/Input';
+import Row from '../../public/src/Row';
 
 
 
 
-
-var myFirebaseRef = new Firebase("https://roommatching-9d6da.firebaseio.com/");
+var messageRef = new Firebase("https://roommatching-9d6da.firebaseio.com/list");
 
 
 class ChatMessage extends React.Component {
@@ -12,22 +13,27 @@ class ChatMessage extends React.Component {
   constructor(props){
     super(props);
 
-     myFirebaseRef.set({
-      title: "Hello World!",
-      author: "Firebase",
-      location: {
-        city: "San Francisco",
-        state: "California",
-        zip: 94103
-      }
-    }); 
+    this.state = {
+       message : ""
+    }
+   
   }
- 
+  componentWillMount(){
+    messageRef.once("value", function(snapshot){
+      var messageSnapshot = snapshot.child();
+      var messageSnapshot2 = snapshot.child("message");
+    console.log("dddddddddd", messageSnapshot + " :: " + messageSnapshot2);
+    });
+    // this.setState({message : })
+  }
+
+
   render() {
+
+     
     return (
       
       <div>
-         
             <div className="chip" style = {{marginLeft : "30px", marginTop :"30px"}}>
               <img src="images/yuna.jpg" alt="Contact Person"/>
               Jane Doe
@@ -36,8 +42,8 @@ class ChatMessage extends React.Component {
             	
               메시지 내용입니다 아녕하시오아ㅏ 아아아
             </div>
-        
-
+                
+      
 
       </div>
     );
@@ -45,3 +51,6 @@ class ChatMessage extends React.Component {
 }
 
 export default ChatMessage;
+
+
+        
