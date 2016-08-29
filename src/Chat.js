@@ -9,32 +9,60 @@ import logo from './logo.svg';
 import './App.css';
 
 
-var myFirebaseRef = new Firebase("https://roommatching-9d6da.firebaseio.com/");
+var messageRef = new Firebase("https://roommatching-9d6da.firebaseio.com/list");
 
 
 class Chat extends React.Component {
 
   constructor(props){
     super(props);
-
-     myFirebaseRef.set({
-      title: "Hello World!",
-      author: "Firebase",
-      location: {
-        city: "San Francisco",
-        state: "California",
-        zip: 94103
-      }
-    }); 
+    this.state={
+      messagearr:[]
+    }
   }
- 
+
+  mapToComponents(data){
+/*    var testarr = ["dddd","Dddd","ㅇㅇㅇㅇ"];
+    console.log(testarr);
+    console.log(testarr[1])*/
+  console.log("data")
+  console.log("data",data)
+  console.log(typeof data)
+
+};
+
+  componentWillMount(){
+    var messagearr = [];
+    messageRef.once("value", function(snapshot){
+      // console.log("snapshot");
+      var arr = snapshot.val();
+      for(var key in arr) {
+          var value = arr[key];
+          messagearr.push(value.message);
+      }
+    });
+      this.setState({messagearr : messagearr});
+  }
+
   render() {
+
+    const mapToComponents = (data) => {
+      console.log(data);
+      console.log("data");
+      console.log(data[0]);
+       return data.map((message) => {
+        console.log("message")
+        console.log(message)
+        return (<ChatMessage message = {message}/>);
+      });
+    };
+
     return (
-      
+
       <div>
-         
+
             <Header/>
-            <ChatMessage/>
+             <div>{mapToComponents(this.state.messagearr)}</div>
             <ChatInput/>
 
       </div>

@@ -18,9 +18,16 @@ class DormChoice extends React.Component {
     
         return (
             <div>
-                   
-                  
-
+                <form class="new_article" id="new_article" action="https://ecafboaknigol-fifteenmania.c9users.io//articles" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="U/kjgrn15xFCxWqcyUj9CJs3EVbI/ZBQYODbbYj8A0F1gxK2PVwObmkn9PXDUWgvwiHGaoVsSe4YEuq1gUiZ6g==" />
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="제목을 입력하세요" type="text" name="article[title]" id="article_title" />
+                                </div>
+                                <div class="form-group">
+                    <textarea class="form-control" placeholder="내용을 입력하세요" rows="5" name="article[text]" id="article_text">
+                    </textarea>
+                                </div>
+                                <input type="submit" name="commit" value="Create Article" />
+                            </form>
                     <div className="card">
                     
                      <div className="card-content ">   

@@ -23,28 +23,28 @@ class ChatInput extends React.Component {
     this.handleChange = this.handleChange.bind(this);
      this.handlePost = this.handlePost.bind(this);
      this.handleKeyPress = this.handleKeyPress.bind(this);
-     
+
   }
   firebase(message){
-    
+
     messageListRef.push({ 'message' : message });
       //  newMessageRef.set({ 'message': message });
   }
 
   handleChange(event){
 
-    this.setState({value: event.target.value}); 
+    this.setState({value: event.target.value});
   }
   handlePost(){
     let message = this.state.value;
     console.log(message);
     this.firebase(message);
-   
+
 
     this.setState({value : ""});
   }
   handleKeyPress(e){
-  
+
     if(e.key === 'Enter'){
       let message = this.state.value;
       console.log(message);
@@ -55,7 +55,7 @@ class ChatInput extends React.Component {
 
   // componentWillMount(){
   //      var messageListRef = new Firebase('https://roommatching-9d6da.firebaseio.com/list');
-  //     var newMessageRef = messageListRef.push();  
+  //     var newMessageRef = messageListRef.push();
   //     newMessageRef.set({ 'user_id': 'fred', 'text': 'Yabba Dabba Doo!' });
   // }
 
@@ -65,9 +65,9 @@ class ChatInput extends React.Component {
     Materialize.updateTextFields();
   });
     return (
-      
+
       <div>
-             
+
               <div className="row" style={{position:"fixed", bottom:"10px", left:"30px", right:"0px"}} >
                   <div className="col s12" >
                     <div className="row">
@@ -82,10 +82,10 @@ class ChatInput extends React.Component {
                       </button>
                       </div>
                     </div>
-                   
+
                   </div>
                 </div>
-                        
+
       </div>
     );
   }
