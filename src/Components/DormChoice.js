@@ -3,31 +3,60 @@
  */
 import React from 'react';
 import Input from '../public/src/Input';
-
-
+import DormSelectItem from './DormSelectItem';
+ import update from 'react-addons-update';
 
 class DormChoice extends React.Component {
 
     constructor(props){
         super(props);
+        this.state = {
+            isSelectedKey : -1,
+            dormData : [
+                {name : "6동", dongid:0},
+                {name : "7동", dongid:1},
+                {name : "8동", dongid:2},
+                {name : "9동", dongid:3}
+            ],
+            donglist:[]
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
 
+    handleChange( isChecked,dongid){
+        console.log('handleChange1', isChecked,dongid);
+        if(isChecked){
+            this.setState({
+            donglist:update(
+                this.state.donglist,{
+                    $push:[dongid]
+                }
+            )})
+        }else{
+            this.setState({
+            donglist:update(
+                this.state.donglist,{
+                    $splice:[[dongid,1]]
+                }
+            )})
+        }
+        console.log('handleChange2',this.state.donglist)
     }
 
 
     render() {
-    
+            const mapToComponents = (data) =>{
+                return data.map((check, i) =>{
+            
+            return (<DormSelectItem check = {check} key = {i}
+                    isSelected = {this.state.isSelected != -1 }
+                    onItemSelect = {this.handleChange}/>);
+            })
+        }
         return (
             <div>
-                <form class="new_article" id="new_article" action="https://ecafboaknigol-fifteenmania.c9users.io//articles" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="U/kjgrn15xFCxWqcyUj9CJs3EVbI/ZBQYODbbYj8A0F1gxK2PVwObmkn9PXDUWgvwiHGaoVsSe4YEuq1gUiZ6g==" />
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="제목을 입력하세요" type="text" name="article[title]" id="article_title" />
-                                </div>
-                                <div class="form-group">
-                    <textarea class="form-control" placeholder="내용을 입력하세요" rows="5" name="article[text]" id="article_text">
-                    </textarea>
-                                </div>
-                                <input type="submit" name="commit" value="Create Article" />
-                            </form>
+                   
+                
                     <div className="card">
                     
                      <div className="card-content ">   
@@ -39,7 +68,8 @@ class DormChoice extends React.Component {
                               <Input name='group1' type='checkbox' value='7동' label='7동'  />
                               <Input name='group1' type='checkbox' value='8동' label='8동'  />
                               <Input name='group1' type='checkbox' value='9동' label='9동'/>
-                              <br/><br/>  
+                              <br/><br/> 
+                              <div>{mapToComponents(this.state.dormData)}</div> 
                     </div>
                   
                     
