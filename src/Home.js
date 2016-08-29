@@ -11,9 +11,9 @@ import HomeFooter from './Components/HomeFooter';
 import FacebookButton from './Components/FacebookButton';
 
 // //
-import Counter from './Components/Counter';
-import Buttons from './Components/Buttons';
-import Option from './Components/Option';
+// import Counter from './Components/Counter';
+// import Buttons from './Components/Buttons';
+// import Option from './Components/Option';
 //////
 
 import logo from './logo.svg';
@@ -108,9 +108,7 @@ class App extends React.Component {
                       <FacebookButton />
                    
                     
-                      <Counter/>
-                    <Option/>
-                    <Buttons/>
+                  
                 </div >
                 <HomeCommonParallax/>
                 <HomeFooter/>
